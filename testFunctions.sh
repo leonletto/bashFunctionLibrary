@@ -19,6 +19,13 @@ else
 fi
 
 # test the prepScript.sh script
-files='"bashLibrary.sh" "prepScript.sh"'
+files=("bashLibrary.sh" "bashLibrary.sh")
 destination="fullScript.sh"
-./prepScript.sh "${files}" "$destination"
+./prepScript.sh "${files[@]}" "$destination"
+
+echo "Testing the prepScript.sh script"
+echo " Check the $destination file to see if it was created and has the correct contents"
+echo " Press any key to continue"
+read -r -s -n 1
+rm -f "$destination"
+

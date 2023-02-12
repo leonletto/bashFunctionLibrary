@@ -11,14 +11,19 @@ if [[ "${TRACE-0}" == "1" ]]; then set -o xtrace; fi
 
 # Directions:
 # create an array of files to combine
-# example: files=("bashLibrary.sh" "prepScript.sh")
+# example: files=("bashLibrary.sh" "bashLibrary.sh")
 # decide on a destination file name
 # example: destination="fullScript.sh"
 # run the script
 # example: ./prepScript.sh "${files[@]}" "$destination"
+# Notice how you must use the "${files[@]}" syntax to pass the array to the script
+
 
 # take lines from the sfiles starting at ###SOF### and ending at ###EOF### and add them to the dfile
 # if the dfile does not exist it will be created
+# if the dfile does exist it will be overwritten
+
+# note - do not include teh shebang line in the source files since it will be added to the destination file automatically
 
 # $1 - source files array
 # $2 - destination file
@@ -52,3 +57,4 @@ for ifile in "${sfiles[@]}"; do
     fi
 done
 
+###EOF###
