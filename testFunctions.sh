@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-. ./bashLibrary.sh
+. ./bashFunctionLibrary.sh
 
 # Test the checkPassword function
 echo "Testing checkPassword function"
@@ -19,7 +19,7 @@ else
 fi
 
 # test the prepScript.sh script
-files=("bashLibrary.sh" "bashLibrary.sh")
+files=("bashFunctionLibrary.sh" "bashFunctionLibrary.sh")
 destination="fullScript.sh"
 ./prepScript.sh "${files[@]}" "$destination"
 

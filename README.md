@@ -3,7 +3,7 @@ some common utility functions I use in my other libraries and scripts that are t
 
 ## Usage for bashLibrary.sh
 ```bash
-. ./bashLibrary.sh
+. ./bashFunctionLibrary.sh
 
 # Use the functions
 # Test the checkPassword function
@@ -20,7 +20,7 @@ fi
 ## Usage for prepScript.sh
 ```bash
 # create an array of files to combine
-files=("bashLibrary.sh" "bashLibrary.sh")
+files=("bashFunctionLibrary.sh" "bashFunctionLibrary.sh")
 # decide on a destination file name
 destination="fullScript.sh"
 # run the script

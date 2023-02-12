@@ -11,7 +11,7 @@ if [[ "${TRACE-0}" == "1" ]]; then set -o xtrace; fi
 
 # Directions:
 # create an array of files to combine
-# example: files=("bashLibrary.sh" "bashLibrary.sh")
+# example: files=("bashFunctionLibrary.sh" "bashFunctionLibrary.sh")
 # decide on a destination file name
 # example: destination="fullScript.sh"
 # run the script
