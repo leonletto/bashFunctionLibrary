@@ -17,3 +17,8 @@ if checkPassword "$testPassword"; then
 else
     echo "Password is invalid"
 fi
+
+# test the prepScript.sh script
+files='"bashLibrary.sh" "prepScript.sh"'
+destination="fullScript.sh"
+./prepScript.sh "${files}" "$destination"
